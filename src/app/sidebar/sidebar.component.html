@@ -1,0 +1,24 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">supervised_user_circle</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="new" [class.activated]="currentUrl == '/new'">
+        <i class="material-icons">create</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="modify" [class.activated]="currentUrl == '/modify'">
+        <i class="material-icons">build</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="delete" [class.activated]="currentUrl == '/delete'">
+        <i class="material-icons">delete</i>
+      </a>
+    </li>
+  </ul>
+</nav>

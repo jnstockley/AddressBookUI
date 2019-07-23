@@ -1,0 +1,60 @@
+<h1>Modify User</h1>
+
+<form [formGroup]="modifyUser" (ngSubmit)="onSubmit()">
+  <h5 *ngIf="updated">Your person was successfully updated!</h5>
+  <h5 *ngIf="updated==false && submitted">Your person was not update!</h5>
+  <mat-form-field>
+      User ID:
+      <input matInput type="text" formControlName="userId">
+      <div *ngIf="submitted && modifyUser.controls.userId.errors" class="error">
+        <div *ngIf="modifyUser.controls.userId.errors.required">User ID is Required!</div>
+      </div>
+    </mat-form-field>
+    <br>
+  <mat-form-field>
+    First Name:
+    <input matInput type="text" formControlName="firstName">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    Middle Initial:
+    <input matInput type="text" formControlName="middleInitial">
+    </mat-form-field>
+    <br>
+  <mat-form-field>
+     Last Name:
+    <input matInput type="text" formControlName="lastName">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+      House Number:
+     <input matInput type="text" formControlName="number">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Street Name:
+     <input matInput type="text" formControlName="name">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      City:
+     <input matInput type="text" formControlName="city">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      State:
+     <input matInput type="text" formControlName="state">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Zip Code:
+     <input matInput type="text" formControlName="zip">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Occupation:
+     <input matInput type="text" formControlName="occupation">
+   </mat-form-field>
+   <br>
+  <button mat-raised-button color="primary" (click)="onSubmit()" >Modify User</button>
+</form>

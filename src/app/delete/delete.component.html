@@ -1,0 +1,19 @@
+<h1>Delete User</h1>
+
+<form [formGroup]="deleteUser" (ngSubmit)="onSubmit()">
+  <h5 *ngIf="success">Your form is valid!</h5>
+  <mat-form-field>
+      User ID:
+      <input matInput type="text" formControlName="userId">
+      <div *ngIf="submitted && deleteUser.controls.userId.errors" class="error">
+        <div *ngIf="deleteUser.controls.userId.errors.required">User ID is Required!</div>
+      </div>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Delete User</button>
+</form>
+
+<div *ngIf="submitted" class="results">
+  <strong>User ID:</strong>
+  <span>{{ deleteUser.controls.userId.value }}</span>
+</div>

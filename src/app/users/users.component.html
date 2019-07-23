@@ -1,0 +1,12 @@
+<h1>People</h1>
+
+<ul [@listStagger]="users$">
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}" >{{ user.firstName  + " " + user.middleInitial  + ". " + user.lastName }}</a>
+
+    <ul>
+      <li>Occupation: {{ user.occupation }}</li>
+      <li>Address: <a target="_blank" href="https://www.google.com/maps/search/{{user.number}}+{{user.name}},+{{user.city}},+{{user.state}}+{{user.zip}}">{{ user.number + " " + user.name + " " + user.city + ", " + user.state + " " + user.zip }}</a></li>
+    </ul>
+  </li>
+</ul>
