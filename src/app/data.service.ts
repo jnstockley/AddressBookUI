@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { headersToString } from 'selenium-webdriver/http';
 import { Observable } from 'rxjs';
 import {Person} from './classes/Person';
 import {Occupation} from './classes/Occupation';
@@ -13,7 +12,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://jackstockley.ddns.net:8080/AddressBookREST/';
+  url = 'http://128.255.201.224:8080/AddressBookREST/';
 
   getUsers() {
     return this.http.get(this.url+'person/')
