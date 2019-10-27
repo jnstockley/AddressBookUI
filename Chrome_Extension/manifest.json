@@ -3,7 +3,7 @@
 
   "name": "AddressBook UI",
   "short_name": "AddressBook",
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "Create, Read, Update, and Destroy data from the MySQL Address Book Server",
   "permissions": ["declarativeContent", "storage"],
   "background": {
