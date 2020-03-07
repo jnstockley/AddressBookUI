@@ -1,0 +1,14 @@
+<h1>People</h1>
+
+<ul [@listStagger]="users$">
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}" >{{ user.firstName  + " " + user.middleName  + " " + user.lastName }}</a>
+
+    <ul>
+    <strong>Occupation:</strong>
+      <li style="margin-left: 40px;">Company Name: {{ user.companyName }} <br>Job Title: {{ user.jobTitle }} <br>Employment Type: {{ user.employmentType }}<br>Monthly Salary: ${{user.monthlySalary}}<br>Industry: {{user.industry}}</li>
+      <strong>Address:</strong>
+      <li style="margin-left: 40px;"><a target="_blank" href="https://www.duckduckgo.com/?q={{user.number}}+{{user.street}},+{{user.city}},+{{user.state}}+{{user.zip}}&ia=maps&iaxm=maps">{{ user.number + " " + user.street + " " + user.city + ", " + user.state + " " + user.zip }}</a></li>
+    </ul>
+  </li>
+</ul>

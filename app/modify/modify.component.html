@@ -1,0 +1,124 @@
+<h1>Modify User</h1>
+
+<form [formGroup]="modifyUser">
+  <h5 *ngIf="updated">Your person was successfully updated!</h5>
+  <h5 *ngIf="updated==false && submitted">Your person was not update!</h5>
+  <mat-form-field>
+      User ID:
+      <input matInput type="number" formControlName="userId">
+      <div *ngIf="submitted && modifyUser.controls.userId.errors" class="error">
+        <div *ngIf="modifyUser.controls.userId.errors.required">User ID is Required!</div>
+      </div>
+    </mat-form-field>
+    <br>
+  <mat-form-field>
+    First Name:
+    <input matInput type="text" formControlName="firstName">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    Middle Name:
+    <input matInput type="text" formControlName="middleName">
+    </mat-form-field>
+    <br>
+  <mat-form-field>
+     Last Name:
+    <input matInput type="text" formControlName="lastName">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    Home Phone:
+   <input matInput type="text" formControlName="homePhone">
+ </mat-form-field>
+ <br>
+ <mat-form-field>
+  Mobile Phone:
+ <input matInput type="text" formControlName="mobilePhone">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Work Phone:
+ <input matInput type="text" formControlName="workPhone">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Home Email:
+ <input matInput type="text" formControlName="homeEmail">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Work Email:
+ <input matInput type="text" formControlName="workEmail">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Height (cm):
+ <input matInput type="number" formControlName="height">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Weight (lbs):
+ <input matInput type="number" formControlName="weight">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Gender:
+ <input matInput type="text" formControlName="gender">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Race:
+ <input matInput type="text" formControlName="race">
+</mat-form-field>
+<br>
+  <mat-form-field>
+      House Number:
+     <input matInput type="number" formControlName="number">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Street Name:
+     <input matInput type="text" formControlName="street">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      City:
+     <input matInput type="text" formControlName="city">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      State:
+     <input matInput type="text" formControlName="state">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Zip Code:
+     <input matInput type="text" formControlName="zip">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+      Company Name:
+     <input matInput type="text" formControlName="companyName">
+   </mat-form-field>
+   <br>
+   <mat-form-field>
+    Job Title:
+   <input matInput type="text" formControlName="jobTitle">
+ </mat-form-field>
+ <br><mat-form-field>
+  Employment Type:
+ <input matInput type="text" formControlName="employmentType">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Monthly Salary:
+ <input matInput type="text" formControlName="monthlySalary">
+</mat-form-field>
+<br>
+<mat-form-field>
+  Industry:
+ <input matInput type="text" formControlName="industry">
+</mat-form-field>
+<br>
+  <button mat-raised-button color="primary" (click)="onSubmit()" >Modify User</button>
+</form>

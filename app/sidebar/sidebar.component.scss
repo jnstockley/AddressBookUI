@@ -1,0 +1,35 @@
+nav {
+    background: #2D2E2E;
+    height: 100%;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+            a {
+                color: #fff;
+                padding: 20px;
+                display: block;
+            }
+
+            @media(prefers-color-scheme: light){
+                .activated {
+                    background-color: #00a8ff;
+                }
+            }
+
+            @media(prefers-color-scheme: dark){
+                .activated{
+                    background-color: rgb(0, 118, 177);
+                }
+
+                a{
+                    color: rgb(218, 218, 218);
+                }
+            }
+        }
+    }
+}
