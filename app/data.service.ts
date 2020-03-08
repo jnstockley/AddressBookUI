@@ -11,7 +11,7 @@ import {Address} from './classes/Address';
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  url = 'http://jackstockleyiowa.ddns.net:8080/AddressBookREST/';
+  url = 'https://jackstockleyiowa.ddns.net:8443/AddressBookREST/';
   //url = 'http://localhost:8080/addressbookrest/';
   
   getUsers() {
