@@ -1,4 +1,8 @@
 # AddressBookUI
+
+## New Backend Support
+I have finally gotten around to updating the program to work with the new backend. Some features have been removed. I will try to add them back , but with my limited angular knowledge it might take awhile. Also there are some errors where it returns null for some people. If that happens please refresh the page. I will try to with that at some point.
+
 Verison 2.0 has been released!
 
 This is the biggest update since I have release the first address book!
