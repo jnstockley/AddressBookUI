@@ -1,0 +1,21 @@
+<div *ngIf="person$" >
+    <h1>{{ person$.firstName }}  {{ person$.middleName}} {{person$.lastName}}'s Details Page</h1>
+  
+    <ul>
+    <li><strong>Person</strong><br>ID: {{person$.id}}<br> Home Phone: {{person$.homePhone.substring(0,3)}}-{{person$.homePhone.substring(3,6)}}-{{person$.homePhone.substring(6)}} Mobile Phone: {{person$.mobilePhone.substring(0,3)}}-{{person$.mobilePhone.substring(3,6)}}-{{person$.mobilePhone.substring(6)}} Work Phone: {{person$.workPhone.substring(0,3)}}-{{person$.workPhone.substring(3,6)}}-{{person$.workPhone.substring(6)}}<br>Personal Email: {{person$.homeEmail}} Work Email: {{person$.workEmail}}<br>Height: {{person$.height}} cm Weight: {{person$.weight}} lbs<br>Gender: {{person$.gender}} Race: {{person$.race}}<br>Person Creation Date: {{person$.date}} Person Creation Time: {{person$.time}}</li>
+     <!--<li><strong>Address</strong><br>ID: {{address$.id}}<br>{{ address$.number }}  {{ address$.street}} {{address$.city}},  {{address$.state}} {{address$.zip}}<br>Address Creation Date: {{address$.date}} Address Creation Time: {{address$.time}}</li>-->
+     <!--<li><strong>Occupation</strong><br>ID: {{occupation$.id}}<br>Company Name: {{ occupation$.companyName }} <br>Job Title: {{ occupation$.jobTitle }} <br>Employment Type: {{ occupation$.employmentType }}<br>Monthly Salary: ${{occupation$.monthlySalary}}<br>Industry: {{occupation$.industry}}<br>Occupation Creation Date: {{occupation$.occupationDate}} Occupation Creation Time: {{occupation$.occupationTime}}</li>-->
+    </ul>
+    <div *ngIf="address$">
+      <ul>
+        <li><strong>Address</strong><br>ID: {{address$.id}}<br>{{ address$.number }}  {{ address$.street}} {{address$.city}},  {{address$.state}} {{address$.zip}}<br>Address Creation Date: {{address$.date}} Address Creation Time: {{address$.time}}</li>
+      </ul>
+    </div>
+    <div *ngIf="occupation$">
+      <ul>
+        <li><strong>Occupation</strong><br>ID: {{occupation$.id}}<br>Company Name: {{ occupation$.companyName }} <br>Job Title: {{ occupation$.jobTitle }} <br>Employment Type: {{ occupation$.employmentType }}<br>Monthly Salary: ${{occupation$.monthlySalary}}<br>Industry: {{occupation$.industry}}<br>Occupation Creation Date: {{occupation$.date}} Occupation Creation Time: {{occupation$.time}}</li>
+      </ul>
+    </div>
+  </div>
+
+  

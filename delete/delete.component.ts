@@ -26,12 +26,10 @@ export class DeleteComponent implements OnInit {
       return;
     }
 
-    //this.success=true;
     if(this.submitted){
       this.data.deleteUser(this.deleteUser.value.userId).subscribe(
       data =>{
-        console.log(data.removed);
-        if(data.removed == "true"){
+        if(data == true){
           this.success = true;
         }else{
           this.success = false;

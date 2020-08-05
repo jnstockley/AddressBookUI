@@ -1,9 +1,0 @@
-<div *ngIf="person$" >
-    <h1>{{ person$.firstName }}  {{ person$.middleName}} {{person$.lastName}}'s Details Page</h1>
-  
-    <ul>
-    <li><strong>Person</strong><br>ID: {{person$.id}}<br> Home Phone: {{person$.homePhone.substring(0,3)}}-{{person$.homePhone.substring(3,6)}}-{{person$.homePhone.substring(6)}} Mobile Phone: {{person$.mobilePhone.substring(0,3)}}-{{person$.mobilePhone.substring(3,6)}}-{{person$.mobilePhone.substring(6)}} Work Phone: {{person$.workPhone.substring(0,3)}}-{{person$.workPhone.substring(3,6)}}-{{person$.workPhone.substring(6)}}<br>Personal Email: {{person$.homeEmail}} Work Email: {{person$.workEmail}}<br>Height: {{person$.height}} cm Weight: {{person$.weight}} lbs<br>Gender: {{person$.gender}} Race: {{person$.race}}<br>Person Creation Date: {{person$.date}} Person Creation Time: {{person$.time}}</li>
-     <li><strong>Address</strong><br>ID: {{person$.addressId}}<br>{{ person$.number }}  {{ person$.street}} {{person$.city}},  {{person$.state}} {{person$.zip}}<br>Address Creation Date: {{person$.addressDate}} Address Creation Time: {{person$.addressTime}}</li>
-     <li><strong>Occupation</strong><br>ID: {{person$.occupationId}}<br>Company Name: {{ person$.companyName }} <br>Job Title: {{ person$.jobTitle }} <br>Employment Type: {{ person$.employmentType }}<br>Monthly Salary: ${{person$.monthlySalary}}<br>Industry: {{person$.industry}}<br>Occupation Creation Date: {{person$.occupationDate}} Occupation Creation Time: {{person$.occupationTime}}</li>
-    </ul>
-  </div>

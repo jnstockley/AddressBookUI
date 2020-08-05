@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-users',
@@ -33,14 +33,16 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
 })
 export class UsersComponent implements OnInit {
 
-  users$: Object;
+  person$: Object;
+  
+  constructor(private httpService: HttpClient) { }
 
-  constructor(private data: DataService) { }
-
-  ngOnInit(): void {
-    this.data.getUsers().subscribe(
-      data => this.users$ = data 
-    );
+  async ngOnInit() {
+    let personData = this.httpService.get("http://10.0.0.191:8080/AddressBookREST/person/")
+    personData.subscribe(
+      data => {
+        this.person$ = JSON.parse(JSON.stringify(data));
+      }
+    )
   }
-
 }
