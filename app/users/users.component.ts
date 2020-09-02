@@ -39,7 +39,7 @@ export class UsersComponent implements OnInit {
 
   async ngOnInit() {
     let personData = this.httpService.get("http://10.0.0.191:8080/AddressBookREST/person/")
-    personData.subscribe(
+    await personData.subscribe(
       data => {
         this.person$ = JSON.parse(JSON.stringify(data));
       }
